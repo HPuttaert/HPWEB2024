@@ -12,13 +12,14 @@
   background-color: navy;
   color: white;
   text-align: right;
-  padding: 20px;
+  padding: 40px;
   padding-right: 40px;
 }
 
 .header h1 {
-  margin: 10px;
-  font-size: 1.5em;
+  margin: 60px;
+  text-align: right; /* Move the title more to the right */
+  font-size: 1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -26,8 +27,6 @@
     padding: 35px;
   }
 }
-
-/* Add the following styles at the end of the existing CSS */
 
 .container {
   max-width: 2400px;
@@ -53,6 +52,8 @@
 .logo {
   font-size: 24px;
   color: white;
+  margin-left: 60px;
+  position: relative;
   font-weight: 800;
 }
 
@@ -166,7 +167,6 @@
   display: block;
 }
 
-
 body {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
@@ -178,19 +178,13 @@ body {
   min-height: 100vh;
 }
 
-.menu-toggle {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
 .hero-section {
   text-align: center;
   margin-top: 50px;
 }
 
 .hero-section h1 {
-  font-size: 1.5em;
+  font-size: 1.2em; /* Reduced size for the header */
   margin-bottom: 28px;
   color: navy; /* Dark gray heading color */
 }
@@ -289,17 +283,17 @@ body {
 
 .text-container {
   flex: 1;
-  font-size: 25px;
+  font-size: 20px; /* Reduced size for the text */
   margin-left: 30px;
   margin-right: 10px;
-  line-height: 55px;
+  line-height: 35px; /* Adjusted line-height for better readability with the reduced font size */
 }
 
 .text-container h2 {
   color: navy;
-  font-size: 55px;
+  font-size: 45px;
   font-style: italic;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
   
 }
 
