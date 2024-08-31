@@ -1,60 +1,100 @@
-/* Add the following styles at the end of the existing CSS */
-
-#harold-puttaert {
-  font-family: 'Arial', sans-serif;
-}
-
+/* General Styles */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Viewport height */
-  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
+/* Full Width Sections */
+.full-width {
+  padding: 40px;
+  margin-bottom: 20px; /* Reduce this value to decrease the space between sections */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section with Dropdown */
 .header-section {
-  position: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  height: 200px; /* Set a fixed height for the header section */
-}
-
-.header-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container */
-}
-
-.header-title {
-  position: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.header-title h2 {
-  font-size: 2em;
   background-color: navy;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  text-align: right;
 }
 
-/* Contact Section Styles */
-.contact-section {
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: navy;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #11d659;
+}
+
+/* Profile Section */
+.profile {
+  text-align: center;
   padding: 20px;
-  background-color: #fff; /* White background */
-  margin: 20px auto; /* Center the section horizontally */
+  background-color: #fff;
+  margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.profile img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   padding: 10px 18px;
-  text-decoration: none; 
+  text-decoration: none;
   background-color: navy;
   color: white;
   border-radius: 5px;
@@ -63,63 +103,129 @@ body {
 }
 
 .btn:hover {
-  background-color: #333;
+  background-color: #11d659;
 }
 
-.btn-contact {
-  display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 10px 18px;
-  text-decoration: none; 
-  background-color: navy;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
+/* Timeline for Experience and Education Sections */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-left: 2px solid navy;
 }
 
-.btn-contact:hover {
-  background-color: #333;
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
 }
 
-.btn-download {
-  display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 10px 18px;
-  text-decoration: none; 
-  background-color: #006400;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
-}
-
-.btn-download:hover {
-  background-color: #006400;
-}
-
-.social-icons {
+.timeline-icon {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  background-color: white;
+  border: 2px solid navy;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   text-align: center;
+  line-height: 56px;
 }
 
-.social-icons img {
-  width: 5px;
-  height: 5px;
-  margin: 5px;
+.timeline-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
 }
 
-/* Placeholder Styles for Other Sections */
-.experience-section,
-.education-section,
-.core-competences-section,
-.certifications-section,
-.languages-section,
-.additional-info-section {
-  padding: 20px;
-  background-color: #fff; /* White background */
-  margin: 20px auto; /* Center the section horizontally */
+.timeline-content {
+  padding: 10px;
+  background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.timeline-content h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  color: navy;
+  margin-bottom: 5px;
+}
+
+.timeline-content h3 .location {
+  font-size: 0.9em;
+  color: #666;
+  margin-right: 10px;
+  text-align: right;
+  margin-left: auto;
+}
+
+.timeline-content p {
+  margin-bottom: 5px;
+}
+
+/* Further Experience Section */
+.further-experience-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.further-experience-section ul li {
+  line-height: 1.8; /* Increase line height to provide more space between lines */
+  margin-bottom: 10px; /* Optional: Add margin between list items for extra spacing */
+}
+
+/* Style for certificate links */
+.further-experience-section a {
+  color: #1a73e8; /* Light blue color */
+  text-decoration: underline;
+}
+
+.further-experience-section a:hover {
+  color: #0c47a1; /* Darker blue on hover */
+}
+
+
+/* Languages Section */
+.languages-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.languages-section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: navy;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
